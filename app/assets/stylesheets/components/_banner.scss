@@ -1,0 +1,35 @@
+.home-banner {
+  background-size: cover;
+  height: 60vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 20vh;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(67,67,67,0.8)), url("https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c405034528cf04acab707e51be371d3c&auto=format&fit=crop&w=1600&q=60") no-repeat center;
+  color: darkgrey;
+  font-size: 100px;
+}
+
+.fas  {
+  font-size: 150px;
+  color: #AD0904;
+}
+
+#add-button {
+  position: relative;
+  right: 100px;
+  padding-top: 30px;
+  transition: color 0.5s ease;
+}
+
+#add-button:hover {
+  color: #D10B05;
+}
+
+.sticky {
+  position: fixed ;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+

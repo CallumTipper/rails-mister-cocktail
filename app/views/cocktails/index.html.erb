@@ -1,4 +1,11 @@
-<h2><%= link_to "Add Cocktail", new_cocktail_path%></h2>
+<div class="home-banner">
+  <h1>COCKTAILS</h1>
+</div>
+
+
+<%= link_to new_cocktail_path do%>
+  <i class="fas fa-plus-circle" id="add-button"></i>
+  <% end %>
 
 <ul>
 <% @cocktails.each do |cocktail| %>
