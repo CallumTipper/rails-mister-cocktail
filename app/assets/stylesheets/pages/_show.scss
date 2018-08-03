@@ -1,0 +1,44 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  text-align: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  color: #AD0904;
+}
+
+li{
+  list-style-type: none;
+  border-bottom: 1px solid darkgrey;
+  padding: 10px;
+  text-shadow: 1px 1px 5px black
+}
+
+h3 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.fa-minus-circle {
+  font-size: 30px;
+  padding-left: 30px;
+  transition: color 0.5s ease;
+}
+
+.fa-minus-circle:hover {
+  color: #D10B05;
+  text-decoration: none;
+}
+
+.show-header {
+  margin: 30px;
+  color: #AD0904;
+  font-size: 80px;
+  text-shadow: 1px 1px 5px black
+}

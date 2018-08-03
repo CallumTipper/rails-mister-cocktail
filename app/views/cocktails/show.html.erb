@@ -1,17 +1,27 @@
-<h2><%= @cocktail.name %></h2>
+<h2 class="show-header"><%= @cocktail.name %></h2>
+<div class="container">
+  <div class="info">
+    <ul>
+    <% @doses.each do |dose| %>
+      <li>
+        <div class="item">
+          <h3>
+          <%= dose.ingredient.name %> (<%= dose.description %>)
+           </h3>
+          <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete do %>
+            <i class="fas fa-minus-circle"></i>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+  <div class="form">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit%>
+    <% end %>
+  </div>
+</div>
 
-<ul>
-<% @doses.each do |dose| %>
-  <li>
-    <h2>
-      <%= dose.ingredient.name %> (<%= dose.description %>)
-    </h2> <%= link_to "-", cocktail_dose_path(@cocktail, dose), method: :delete %>
-  </li>
-<% end %>
-</ul>
-
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-<%= f.input :description %>
-<%= f.association :ingredient %>
-<%= f.submit%>
-<% end %>
