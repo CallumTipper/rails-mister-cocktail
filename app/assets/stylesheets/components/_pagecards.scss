@@ -12,10 +12,15 @@
 .cocktail-card h2 {
   margin: 0;
   padding: 25vh;
+
   text-shadow: 1px 1px 5px black
 }
 
-.cocktail-container a {
+.cocktail-name {
+  color: #AD0904;
+}
+
+.cocktail-name a {
   color: #AD0904;
   font-size: 80px;
   transition: color 0.5s ease;
