@@ -5,8 +5,7 @@
   <li>
     <h2>
       <%= dose.ingredient.name %> (<%= dose.description %>)
-    </h2>
-    <%= link_to "-", cocktail_dose_path(@cocktail, dose), method: :delete %>
+    </h2> <%= link_to "-", cocktail_dose_path(@cocktail, dose), method: :delete %>
   </li>
 <% end %>
 </ul>

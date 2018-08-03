@@ -1,8 +1,12 @@
-<h2>Select Cocktail Name</h2>
-
-<%= simple_form_for @cocktail do |f| %>
-<%= f.input :name %>
-<%= f.submit "SET" %>
+<div class="home-banner-new">
+<%= simple_form_for @cocktail, class: "form" do |f|  %>
+<%= f.input :name, label: "Cocktail" %>
+<%= button_tag value: '', data: {disable_with: ""} do %>
+  <i class="fas fa-plus-circle" id="add-button-new"></i>
 <% end %>
+<% end %>
+</div>
+
+
 
 

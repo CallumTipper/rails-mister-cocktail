@@ -2,13 +2,14 @@
   <h1>COCKTAILS</h1>
 </div>
 
+<div class="cocktails-container">
 
-<%= link_to new_cocktail_path do%>
+  <% @cocktails.each do |cocktail| %>
+    <div class="cocktail-card">
+      <h2 class="cocktail-name "><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+    </div>
+  <% end %>
+  <%= link_to new_cocktail_path do%>
   <i class="fas fa-plus-circle" id="add-button"></i>
   <% end %>
-
-<ul>
-<% @cocktails.each do |cocktail| %>
-  <li><h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2></li>
-<% end %>
-</ul>
+</div>
